@@ -1,7 +1,7 @@
 # German Traffic Signs Classifier
 
 ## Data Summary
-Each image has a 32x32x3 dimensions. Training set has 34,799 images, validation set has 4,410 images and testing set has 12,630 images. There are 43 different types of traffic sign images (So, our output layer should have 43 neurons). Each class (type) has different number of samples. Sample traffic sign image looks like below: (insert a sample image and no of samples for each class graph)
+Each image has a 32x32x3 dimensions. Training set has 34,799 images, validation set has 4,410 images and testing set has 12,630 images. There are 43 different types of traffic sign images (So, our output layer should have 43 neurons). Each class (type) has different number of samples. Sample traffic sign image looks like below:
 ![Image of Sample](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/sample.png)
 
 ## Data Preprocessing
