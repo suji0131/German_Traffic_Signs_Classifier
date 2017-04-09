@@ -13,5 +13,11 @@ x_train = x_train - x_t_t
 ```
 
 ## Architecture
+###### Overall Architecture
 Architecture consists of two convolution layers, an Inception module (more on this later), max pool layers and fully connected neural network. First convolution layer has a filter size of 5,5,3,8 and relu activation function. The output of first convolution is then fed to a max pool layer of kernel size 2x2 and a stride of 2x2. This is then fed to another convolution layer with filter size of 3,3,8,16 stride of 1 and relu activation function. This is then forwarded to another max pool layer of kernel size 2x2 and stride 2x2. This is used as an input to inception module. Inception module out put is then fed to max pool layer and then to a fully connected neural network that has three layers, except for output layer (which has sigmoid activation) other layers has relu activation. Input and output dimension for each layer is depicted in below image: 
 ![Image of Architecture](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/Architecture.png)
+
+###### Inception Module
+An inception module has convolutions connected in parallel way. Input is fed to four different parallel lanes. First lane has 1x1 filter size convolution, second lane has 1x1 convolution and a 3x3 convolution, third lane has 1x1 convolution and 5x5 convolution and finally fourth layer has max pooling layer and a 1x1 convolution. Every convolution has relu activation, stride of 1 in every dimension and padding is set as SAME. Output from each lane is concatenated along last axis, -1. Concatenating means stacking every output tensors along a particular axis and care must be taken to keep dimensions in every other axis same.
+(Inception is first implemented in GoogLeNet you can read more about it [here](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf))
+![Image of Inception](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/Inception.png)
