@@ -21,3 +21,9 @@ Architecture consists of two convolution layers, an Inception module (more on th
 An inception module has convolutions connected in parallel way. Input is fed to four different parallel lanes. First lane has 1x1 filter size convolution, second lane has 1x1 convolution and a 3x3 convolution, third lane has 1x1 convolution and 5x5 convolution and finally fourth layer has max pooling layer and a 1x1 convolution. Every convolution has relu activation, stride of 1 in every dimension and padding is set as SAME. Output from each lane is concatenated along last axis, -1. Concatenating means stacking every output tensors along a particular axis and care must be taken to keep dimensions in every other axis same.
 (Inception is first implemented in GoogLeNet you can read more about it [here](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf))
 ![Image of Inception](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/Inception.png)
+
+## Model Training
+Adam optimizer was used to minimize the cross entropy loss. A learning rate of 0.001, batch size of 9000 is used for a total of 65 epochs. Nine thousand random integers are genrated between 0 and 1,96,000 and data at these indices are used as a batch. Training was done on google cloud with 2 vCPUs with 13GB memory and a nVidia Tesla K80 GPU. Training time for each epoch is approximately 22 seconds. 
+
+## Results
+Validation accuracy of 99 percent was acheived and trained model has top five accuracy of 98 percent on test set.  
