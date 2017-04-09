@@ -6,7 +6,7 @@ Each image has a 32x32x3 dimensions. Training set has 34,799 images, validation 
 ![Image of Sample](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/sample.png)
 
 ## Data Preprocessing
-Data set was augmented using slight translations, rotations, zooming and any combination there off. A 34,800 dataset was augmented to 1,96,000 training data set. To accelerate training every component in the image matrix is normalized (by dividing each value by 255) and its average is made 0 (simply by subtracting the average from each component). 
+Data set was augmented using slight translations, rotations, zooming and any combination thereof. A 34,800 dataset was augmented to 1,96,000 training data set. To accelerate training every component in the image matrix is normalized (by dividing each value by 255) and its average is made 0 (simply by subtracting the average from each component). 
 ```
 x_train = x_train/255
 x_t_t = np.average(x_train, axis=0)
@@ -24,7 +24,7 @@ An inception module has convolutions connected in parallel way. Input is fed to 
 ![Image of Inception](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/Inception.png)
 
 ## Model Training
-Adam optimizer was used to minimize the cross entropy loss. A learning rate of 0.001, batch size of 9000 is used for a total of 65 epochs. Nine thousand random integers are genrated between 0 and 1,96,000 and data at these indices are used as a batch. Training was done on google cloud with 2 vCPUs with 13GB memory and a nVidia Tesla K80 GPU. Training time for each epoch is approximately 22 seconds. 
+Adam optimizer was used to minimize the cross entropy loss. A learning rate of 0.001, batch size of 9000 is used for a total of 65 epochs. Nine thousand random integers are generated between 0 and 1,96,000 and data at these indices are used as a batch. Training was done on google cloud with 2 vCPUs with 13GB memory and a nVidia Tesla K80 GPU. Training time for each epoch is approximately 22 seconds. 
 
 ## Results
-Validation accuracy of 99 percent was acheived and trained model has top five accuracy of 98 percent on test set.  
+Validation accuracy of 99 percent was achieved and trained model has top five accuracy of 98 percent on test set.  
