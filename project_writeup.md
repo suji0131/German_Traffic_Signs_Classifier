@@ -67,5 +67,6 @@ Adam optimizer was used to minimize the cross entropy loss. A learning rate of 0
 Validation accuracy of 99 percent was achieved and trained model has top five accuracy of 98 percent on test set. Zoomed in version of the loss (y-axis) vs iteration (x-axis) looks like below. Both training loss and validation loss are smooth which implies that learning rate is good. Training loss didn't increase after steadily decreasing so it can be inferred that there is no over-fitting.  
   
 ![Image of Loss](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/zoom_graph.png)
+Note: 1 epoch = 21 iterations
 
 Five German traffic sign images are pulled from the web and converted as data. When model was run on these new images four of them are correctly classified. Error rate is less for classes which have atleast six thousand data points. To further improve the model data points for every class should be augmented to atleast five thousand threshold.
