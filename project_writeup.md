@@ -68,4 +68,4 @@ Validation accuracy of 99 percent was achieved and trained model has top five ac
   
 ![Image of Loss](https://github.com/suji0131/German_Traffic_Signs_Classifier/blob/master/extras/zoom_graph.png)
 
-Five German traffic sign images are pulled from the web and converted as data. When model was run on these new images four of them are correctly classified. Error rate is less for classes which have atleast six thousand data points. To further improve the model data points for every class should be augments atleast six thousand threshold.
+Five German traffic sign images are pulled from the web and converted as data. When model was run on these new images four of them are correctly classified. Error rate is less for classes which have atleast six thousand data points. To further improve the model data points for every class should be augmented to atleast five thousand threshold.
